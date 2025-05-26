@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Артист</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<div class="rating-section">
+    <h3>Оцените артиста</h3>
+    {% if 'user_id' in session %}
+        <div class="stars">
+            {% for i in range(1, 6) %}
+                <span class="star" data-rating="{{ i }}">★</span>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p><a href="/login">Войдите</a>, чтобы оценить артиста</p>
+    {% endif %}
+</div>
+
+
+<body>
+    <header>
+        <h1>Артист</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="artists.html">Артисты</a>
+            <a href="register.html">Регистрация</a>
+            <a href="login.html">Вход</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Информация об артисте</h2>
+        <p>Здесь будет информация об артисте.</p>
+    </main>
+</body>
+</html>

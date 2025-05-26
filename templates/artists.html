@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAFANERA MUSIC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>>
+    <style>
+       body {
+            background-image: url('/static/images/zadnik.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            position: relative;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        } 
+    </style>
+</head>
+<body class="artists-page">
+    <div class="auth-panel">
+        <a href="{{ url_for('index') }}" class="auth-btn">На главную</a>
+    </div>
+    
+    <div class="page-header">
+        <h1 class="page-title">Выбери своего любимчика</h1>
+    </div>
+    
+    <div class="artists-grid">
+       <a href="{{ url_for('mayot') }}" class="artist-card">
+    <img src="{{ url_for('static', filename='images/mayot1.jpg') }}" alt="MAYOT" class="artist-image">
+    <div class="artist-info">
+        <div class="artist-name">MAYOT</div>
+    </div>
+</a>
+        
+         <a href="{{ url_for('water') }}" class="artist-card">
+            <img src="{{ url_for('static', filename='images/water.jpg') }}" alt="HeronWater" class="artist-image">
+            <div class="artist-info">
+                <div class="artist-name">HERONWATER</div>
+            </div>
+        </a>
+        
+        <a href="{{ url_for('obla') }}" class="artist-card">
+            <img src="{{ url_for('static', filename='images/obla.jpg') }}" alt="obla" class="artist-image">
+            <div class="artist-info">
+                <div class="artist-name">OBLADAET</div>
+            </div>
+        </a>
+        
+        <a href="{{ url_for('whl') }}" class="artist-card">
+            <img src="{{ url_for('static', filename='images/whl.jpg') }}" alt="whl" class="artist-image">
+            <div class="artist-info">
+                <div class="artist-name">Whole Lotta Swag</div>
+            </div>
+        </a>
+        
+        <a href="{{ url_for('august') }}" class="artist-card">
+            <img src="{{ url_for('static', filename='images/august.jpg') }}" alt="aug" class="artist-image">
+            <div class="artist-info">
+                <div class="artist-name">August</div>
+            </div>
+        </a>
+        
+        <a href="{{ url_for('lilk') }}" class="artist-card">
+            <img src="{{ url_for('static', filename='images/lilk.jpg') }}" alt="LILK" class="artist-image">
+            <div class="artist-info">
+                <div class="artist-name">LIL KRYSTALLL</div>
+            </div>
+        </a>
+        
+
+        <a href="{{ url_for('saluki') }}" class="artist-card">
+            <img src="{{ url_for('static', filename='images/saluki.jpg') }}"alt="SALUKI" class="artist-image">
+            <div class="artist-info">
+                <div class="artist-name">SALUKI</div>
+            </div>
+        </a>
+        
+
+        <a href="{{ url_for('soda') }}" class="artist-card">
+            <img src="{{ url_for('static', filename='images/soda.jpg') }}" alt="Soda Luv" class="artist-image">
+            <div class="artist-info">
+                <div class="artist-name">Soda Luv</div>
+            </div>
+        </a>
+
+         <a href="{{ url_for('tgug') }}" class="artist-card">
+            <img src="{{ url_for('static', filename='images/thug.jpg') }}" alt="FRIENDLY THUG 52 NGG" class="artist-image">
+            <div class="artist-info">
+                <div class="artist-name">FRIENDLY THUG 52 NGG</div>
+            </div>
+        </a>
+         <a href="{{ url_for('fendi') }}" class="artist-card">
+            <img src="{{ url_for('static', filename='images/fendi.jpg') }}" alt="FENDIGLOCK" class="artist-image">
+            <div class="artist-info">
+                <div class="artist-name">FENDIGLOCK</div>
+            </div>
+        </a>
+         <a href="{{ url_for('platina') }}" class="artist-card">
+            <img src="{{ url_for('static', filename='images/платина.jpg') }}" alt="Платина" class="artist-image">
+            <div class="artist-info">
+                <div class="artist-name">Платина</div>
+            </div>
+        </a>
+         <a href="{{ url_for('tape') }}" class="artist-card">
+            <img src="{{ url_for('static', filename='images/tape.jpg') }}" alt="Big Baby Tape" class="artist-image">
+            <div class="artist-info">
+                <div class="artist-name">Big Baby Tape</div>
+            </div>
+        </a>
+    </div>
+    
+</body>
+</html>

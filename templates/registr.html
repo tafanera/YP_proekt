@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | Music Rate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>">
+    <style>
+        /* Дополнительные стили специфичные для страницы регистрации */
+        .auth-page {
+            background-image: url('/static/images/1118.gif');
+        }
+    </style>
+</head>
+<body class="auth-page">
+    <div class="auth-panel">
+        <a href="{{ url_for('index') }}" class="auth-btn">На главную</a>
+    </div>
+    
+    <div class="auth-container">
+        <h2 class="auth-title">Регистрация</h2>
+        <form class="auth-form" method="POST" action="/register">
+            <div class="form-group">
+                <label for="username">Имя пользователя</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="auth-btn-submit">Зарегистрироваться</button>
+        </form>
+        <div class="auth-footer">
+            Уже есть аккаунт? <a href="{{ url_for('login') }}" class="auth-link">Войдите</a>
+        </div>
+    </div>
+</body>
+</html>
